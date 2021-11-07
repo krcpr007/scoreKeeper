@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <style>
+        .winner {
+            color: green;
+        }
+
+        .looser {
+            color: red;
+        }
+    </style>
+    <link rel="icon" style="border-radius: 50%;" href="https://avatars.githubusercontent.com/u/80947662?s=96&v=4">
+    <title>scorecard</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="column">
+            <div class="column is-two-fifths is-offset-one-quarter">
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img src="https://m.media-amazon.com/images/I/51JZxvDMmJL._AC_SL1001_.jpg" alt="Placeholder image">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="media">
+                            <div class="media-left">
+                                <figure class="image is-48x48">
+                                    <img src="https://avatars.githubusercontent.com/u/80947662?s=96&v=4" alt="Placeholder image">
+                                </figure>
+                            </div>
+                            <div class="media-content">
+                                <p class="title is-4">Score Keeper</p>
+                               
+                                <p class="subtitle is-6"> <a href="https://github.com/krcpr007">@krcpr007</a></p>
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h1 class="title is-1"> <span id="pl1Display">0 </span> to <span id="pl2Display">0</span></h1>
+                            <p class="subtitle">Use the buttons below to keep score</p>
+                        </div>
+                        <label for="playto" class="label is-large is-inline">Playing to</label>
+                           <div class="select is-rounded">
+                            <select name="" id="maxScore">
+                                <option value="3">3</option>
+                                <option value="5">5</option>
+                                <option value="7">7</option>
+                                <option value="10">10</option>
+
+                            </select>
+                           </div>     
+                        <div class="card-footer">
+                            <button id="pl1Btn" class="button is-primary card-footer-item" onclick="pl1BtnFun()">+1 Player first </button>
+                            <button id="pl2Btn" class="button is-info card-footer-item" onclick="pl2BtnFun()">+1 Player second </button>
+                            <button id="reset" class="button is-danger card-footer-item">Reset</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
